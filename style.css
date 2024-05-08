@@ -61,10 +61,6 @@
     border-radius: 15px;
     border: rgb(184, 184, 184) 2px solid;
 }
-.courses{
-    display: flex;
-    justify-content: space-around;
-}
 *{
     font-family: "Montserrat";
     outline: none;
