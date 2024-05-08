@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoIt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- <link rel="stylesheet" href="border.css"> -->
+</head>
+<style>
+.buttons{
+    height: 80px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    left: 200px;
+}
+.home_button{
+    width: 160px;
+    height: 55px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #00ddff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px, 8px, 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: #ff7300;
+}
+.home_button:hover{
+    background-color: #ff7300;
+    box-shadow: 0px, 15px, 20px, rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.image_goit{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.send_message{
+    width: 200px;
+    height: 55px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px, 8px, 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: #ff7300;
+}
+.send_message:hover {
+    background-color: #ff7300;
+    box-shadow: 0px, 15px, 20px, rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.main_container{
+    margin: 0px auto;
+}
+.main_title{
+    font-size: 50px;
+    color: black;
+    font-family: "Montserrat";
+    text-align: center;
+}
+.main_text{
+    font-size: 25px;
+    color: black;
+    font-family: "Montserrat";
+    text-align: center;
+}
+.python_core{
+    width: 400px;
+    height: 430px;
+    border-radius: 15px;
+    border: rgb(184, 184, 184) 2px solid;
+}
+.h1_python{
+    font-size: 30px;
+    color: black;
+    font-family: "Montserrat";
+    text-align: center;
+}
+.h2_python{
+    font-size: 28px;
+    color: black;
+    font-family: "Montserrat";
+    text-align: center;
+}
+.h3_python{
+    font-size: 20px;
+    color: black;
+    font-style: initial;
+    font-family: "Montserrat";
+    text-align: center;
+}
+.p_core{
+    text-align: center;
+    font-family: "Montserrat";
+}
+.python_web{
+    width: 400px;
+    height: 430px;
+    border-radius: 15px;
+    border: rgb(184, 184, 184) 2px solid;
+}
+.python_data_since{
+    width: 400px;
+    height: 430px;
+    border-radius: 15px;
+    border: rgb(184, 184, 184) 2px solid;
+}
+.courses{
+    display: flex;
+    justify-content: space-around;
+}
+*{
+    font-family: "Montserrat";
+    outline: none;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 250px;
+    background: #fff;
+    padding: 30px;
+    position: absolute;
+    right: 200px;
+    top: -20px;
+}
+.wrapper .input-data{
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+.wrapper .input-data input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid silver;
+}
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: grey;
+}
+.wrapper .input-data label{
+    position: absolute;
+    bottom: 17px;
+    left: 0px;
+    color: grey;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.wrapper .input-data .underline{
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+.input-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #ff7300;
+    transform: scale(0);
+    transition: transform 0.4s ease;
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before{
+    transform: scale(1);
+}
+.learn_about{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.learn__about{
+    width: 160px;
+    height: 65px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #00ddff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px, 8px, 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: #ff7300;
+}
+.learn__about:hover{
+    background-color: #ff7300;
+    box-shadow: 0px, 15px, 20px, rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+</style>
+<body>
+    <div class="upper_container">
+        <img class="image_goit" src="images/Screen.png" alt="">
+        <div class="buttons">
+            <div class="home">
+                <button class="home_button">Courses</button>
+            </div>
+            <div class="message">
+                <button class="send_message">Send message</button>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="input-data">
+            <input type="text" required>
+            <div class="underline"></div>
+            <label>Search</label>
+        </div>
+    </div>
+
+    <div class="main_container">
+        <h1 class="main_title">Python</h1>
+        <p class="main_text">Python can be easy to pick up whether you're a first time programmer or you're experienced with other languages</p>
+        <div class="courses">
+            <div class="python_core">
+                <div class="block_core">
+                    <h1 class="h1_python">Python core</h1>
+                    <hr>
+                    <h2 class="h2_python">12 weeks</h2>
+                    <h3 class="h3_python">Technology:</h3>
+                    <p class="p_core">Python</p>
+                    <p class="p_core">pip</p>
+                    <p class="p_core">OOP</p>
+                    <p class="p_core">pickle</p>
+                    <div class="learn_about">
+                        <a class="learn__about" href="#">
+                            <p class="p_learn">Learn about</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="python_web">
+                <div class="block_core">
+                    <h1 class="h1_python">Python WEB</h1>
+                    <hr>
+                    <h2 class="h2_python">14 weeks</h2>
+                    <h3 class="h3_python">Technology:</h3>
+                    <p class="p_core">Docker, Poetry, Pipenv</p>
+                    <p class="p_core">SQL, MongoDB</p>
+                    <p class="p_core">Django</p>
+                    <p class="p_core">FastAPI</p>
+                    <div class="learn_about">
+                        <a class="learn__about" href="#">
+                            <p class="p_learn">Learn about</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="python_data_since">
+                <div class="block_core">
+                    <h1 class="h1_python">Python Data Since</h1>
+                    <hr>
+                    <h2 class="h2_python">12 weeks</h2>
+                    <h3 class="h3_python">Technology:</h3>
+                    <p class="p_core">NumPy, Pandas</p>
+                    <p class="p_core">Matplotlib, Seaborn</p>
+                    <p class="p_core">TenzorFlow</p>
+                    <p class="p_core">Keras</p>
+                    <div class="learn_about">
+                        <a class="learn__about" href="#">
+                            <p class="p_learn">Learn about</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+    </div>
+
+</body>
+</html> 
