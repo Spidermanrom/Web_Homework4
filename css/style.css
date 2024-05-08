@@ -2,7 +2,7 @@
 
 .image_goit{
     position: relative;
-    top: 18px;
+    top: 10px;
     left: 10px;
 }
 .main_container{
@@ -60,6 +60,10 @@
     height: 430px;
     border-radius: 15px;
     border: rgb(184, 184, 184) 2px solid;
+}
+.courses{
+    display: flex;
+    justify-content: space-around;
 }
 *{
     font-family: "Montserrat";
@@ -119,4 +123,3 @@
 .input-data input:valid ~ .underline:before{
     transform: scale(1);
 }
-
