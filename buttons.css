@@ -1,7 +1,7 @@
 /* HEADER */
 .buttons{
     height: 80px;
-    width: 550px;
+    width: 700px;
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -69,6 +69,28 @@
     text-decoration: #ff7300;
 }
 .blog_button:hover{
+    background-color: #ff7300;
+    box-shadow: 0px, 15px, 20px, rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.log_in{
+    width: 160px;
+    height: 55px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px, 8px, 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: #ff7300;
+}
+.log_in:hover{
     background-color: #ff7300;
     box-shadow: 0px, 15px, 20px, rgba(46, 229, 157, 0.4);
     color: #fff;

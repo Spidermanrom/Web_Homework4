@@ -73,6 +73,28 @@
     color: #fff;
     transform: translateY(-7px);
 }
+.log_in{
+    width: 160px;
+    height: 55px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px, 8px, 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: #ff7300;
+}
+.log_in:hover{
+    background-color: #ff7300;
+    box-shadow: 0px, 15px, 20px, rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
 /* COURSES_BUTTONS */
 .courses{
     display: flex;
@@ -110,7 +132,7 @@
     outline: none;
     box-sizing: border-box;
 }
-.wrapper{
+.wrapper_search{
     width: 250px;
     background: #fff;
     padding: 30px;
@@ -118,12 +140,12 @@
     right: 200px;
     top: -23px;
 }
-.wrapper .input-data{
+.wrapper_search .input-data{
     height: 50px;
     width: 100%;
     position: relative;
 }
-.wrapper .input-data input{
+.wrapper_search .input-data input{
     height: 100%;
     width: 100%;
     border: none;
@@ -136,7 +158,7 @@
     font-size: 15px;
     color: grey;
 }
-.wrapper .input-data label{
+.wrapper_search .input-data label{
     position: absolute;
     bottom: 17px;
     left: 0px;
@@ -144,7 +166,7 @@
     pointer-events: none;
     transition: all 0.3s ease;
 }
-.wrapper .input-data .underline{
+.wrapper_search .input-data .underline{
     position: absolute;
     bottom: 0px;
     height: 2px;
