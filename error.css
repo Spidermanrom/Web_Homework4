@@ -1,0 +1,67 @@
+.container{
+    width: 900px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+h1{
+    font-family: "Montserrat";
+    font-size: 35px;
+}
+h3{
+    font-family: "Montserrat";
+    font-size: 20px;
+    color: gray;
+}
+p{
+    font-family: "Montserrat";
+    font-size: 17px;
+    color: gray;
+}
+.return_button{
+    width: 285px;
+    height: 50px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #b1f3fe;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px, 8px, 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: #ff7300;
+}
+.return_button:hover{
+    background-color: #ff7300;
+    box-shadow: 0px, 15px, 20px, rgba(46, 229, 157, 0.4);
+    color: #fff;
+}
+.write_service_button{
+    width: 285px;
+    height: 50px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #00ddff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px, 8px, 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: #ff7300;
+}
+.write_service_button:hover{
+    background-color: #ff7300;
+    box-shadow: 0px, 15px, 20px, rgba(46, 229, 157, 0.4);
+    color: #fff;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+}

@@ -186,7 +186,7 @@
     transform: scale(1);
 }
 .image_goit{
-    position: relative;
-    top: 10px;
+    position: absolute;
+    top: 23px;
     left: 10px;
 }

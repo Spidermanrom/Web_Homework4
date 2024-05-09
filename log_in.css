@@ -1,22 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   outline: none;
-}
+} */
 .image_goit{
-    position: relative;
-    top: 10px;
+    position: absolute;
+    top: 23px;
     left: 10px;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  outline: none;
 }
 
 .wrapper_search{
@@ -79,6 +72,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
+    outline: none;
 }
 body{
     display: flex;
@@ -180,4 +174,101 @@ section a{
 .sign-up-link a{
     color: #000;
     font-weight: 600;
+}
+.buttons{
+    height: 80px;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    left: 200px;
+}
+.home_button{
+    width: 160px;
+    height: 55px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px, 8px, 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: #ff7300;
+}
+.home_button:hover{
+    background-color: #ff7300;
+    box-shadow: 0px, 15px, 20px, rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.about_us{
+    width: 200px;
+    height: 55px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px, 8px, 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: #ff7300;
+}
+.about_us:hover {
+    background-color: #ff7300;
+    box-shadow: 0px, 15px, 20px, rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.blog_button{
+    width: 160px;
+    height: 55px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px, 8px, 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: #ff7300;
+}
+.blog_button:hover{
+    background-color: #ff7300;
+    box-shadow: 0px, 15px, 20px, rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+.log_in{
+    width: 160px;
+    height: 55px;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #00ddff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px, 8px, 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: #ff7300;
+}
+.log_in:hover{
+    background-color: #ff7300;
+    box-shadow: 0px, 15px, 20px, rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
 }
