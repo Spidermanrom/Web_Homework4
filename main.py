@@ -1,7 +1,9 @@
 import mimetypes
 from pathlib import Path
 import urllib.parse
+import json
 from http.server import HTTPServer, BaseHTTPRequestHandler
+
 
 BASE_DIR = Path()
 
@@ -25,7 +27,12 @@ class GoitFramework(BaseHTTPRequestHandler):
                     self.send_html("error.html", 404)
                     
     def do_POST(self):
-        pass
+        size = self.headers.get('Content-Length')
+        data = self.rfile.read(int(size))
+        print(data)
+        self.send_response(302)
+        self.send_header('Location', '/log_in')
+        self.end_headers()
 
     def send_html(self, filename, status_code=200):
         self.send_response(status_code)
@@ -33,6 +40,7 @@ class GoitFramework(BaseHTTPRequestHandler):
         self.end_headers()
         with open(filename, 'rb') as file:
             self.wfile.write(file.read())
+
 
     def send_static(self, filename, status_code=200):
         self.send_response(status_code)

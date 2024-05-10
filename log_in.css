@@ -10,6 +10,8 @@
     position: absolute;
     top: 23px;
     left: 10px;
+    width: 175px;
+    height: 50px;
 }
 
 .wrapper_search{
