@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Перша стаття",
+        "date": "29.12.2023",
+        "author": "Dmirto",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        "title": "Друга стаття",
+        "date": "24.11.2023",
+        "author": "Roman",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        "title": "Третя стаття",
+        "date": "12.10.2023",
+        "author": "Oleh",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+        "title": "Четверта стаття",
+        "date": "8.03.2023",
+        "author": "Andriy",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    }
+]
