@@ -1,17 +1,50 @@
+import mimetypes
+from pathlib import Path
+import urllib.parse
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
+BASE_DIR = Path()
 
 class GoitFramework(BaseHTTPRequestHandler):
 
     def do_GET(self):
-        self.send_response(200)
-        self.end_headers()
-        with open("index.html", 'rb') as file:
-            self.wfile.write(file.read())
-        with open("./images/Screen.png", 'rb') as file:
-            self.wfile.write(file.read())     
+        route = urllib.parse.urlparse(self.path)
+        print(route.query)
+        match route.path:
+            case "/":
+                self.send_html("index.html")
+            case "/blog":
+                self.send_html("blog.html")
+            case "/log_in":
+                self.send_html("log_in.html")
+            case _:
+                file =  BASE_DIR.joinpath(route.path[1:])
+                if file.exists():
+                    self.send_static(file)
+                else:
+                    self.send_html("error.html", 404)
+                    
     def do_POST(self):
         pass
+
+    def send_html(self, filename, status_code=200):
+        self.send_response(status_code)
+        self.send_header("Content-Type", "text/html")
+        self.end_headers()
+        with open(filename, 'rb') as file:
+            self.wfile.write(file.read())
+
+    def send_static(self, filename, status_code=200):
+        self.send_response(status_code)
+        mime_type, *_ = mimetypes.guess_type(filename)
+        if mime_type:
+            self.send_header("Content-Type", mime_type)
+        else:
+            self.send_header("Content-Type", "text/plain")
+        self.end_headers()
+        with open(filename, 'rb') as file:
+            self.wfile.write(file.read())
+
 
 def run_server():
     address = ('localhost', 8080)
@@ -19,6 +52,8 @@ def run_server():
     try:
         http_server.serve_forever()
     except KeyboardInterrupt:
+        pass
+    finally:
         http_server.server_close()
 
 
