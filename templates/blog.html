@@ -54,5 +54,23 @@
             <label>Search</label>
         </div>
     </div>
+    <main role="main" class="container">
+        {% if message %}
+          <h3>{{ message }}</h3>
+        {% endif %}
+        <div class="row">
+          <div class="col-md-8 blog-main">
+            {% for blog in blogs %}
+            <div class="blog-post">
+              <h2 class="blog-post-title">{{ blog.title }}</h2>
+              <p class="blog-post-meta">{{ blog.date }} by <a href="#">{{ blog.author }}</a></p>
+              <p>
+                {{ blog.text }}
+              </p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </main>
 </body>
 </html>
