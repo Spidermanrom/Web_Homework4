@@ -58,7 +58,7 @@ class GoitFramework(BaseHTTPRequestHandler):
             data = json.load(file)
 
         template = jinja.get_template(filename)
-        message = None  # "Hello Sergiy!"
+        message = None  
         html = template.render(blogs=data, message=message)
         self.wfile.write(html.encode())
 
