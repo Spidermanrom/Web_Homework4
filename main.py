@@ -3,7 +3,6 @@ from pathlib import Path
 import urllib.parse
 import json
 from http.server import HTTPServer, BaseHTTPRequestHandler
-from jinja2 import Environment, FileSystemLoader
 import threading
 import logging
 
@@ -12,8 +11,6 @@ BASE_DIR = Path()
 
 HTTP_PORT = 8080
 HTTP_HOST = '0.0.0.0'
-
-jinja = Environment(loader=FileSystemLoader('templates'))
 
 class GoitFramework(BaseHTTPRequestHandler):
 
@@ -48,19 +45,6 @@ class GoitFramework(BaseHTTPRequestHandler):
         self.end_headers()
         with open(filename, 'rb') as file:
             self.wfile.write(file.read())
-
-    def render_template(self, filename, status_code=200):
-        self.send_response(status_code)
-        self.send_header('Content-Type', 'text/html')
-        self.end_headers()
-
-        with open('storage/db.json', 'r', encoding='utf-8') as file:
-            data = json.load(file)
-
-        template = jinja.get_template(filename)
-        message = None  
-        html = template.render(blogs=data, message=message)
-        self.wfile.write(html.encode())
 
 
     def send_static(self, filename, status_code=200):
